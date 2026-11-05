@@ -79,7 +79,7 @@ variable "snapshot_policies" {
 }
 
 variable "volumes" {
-  description = "Map of volumes keyed by volume name. `pool_key` must match a key in `pools` and `subnet_id` must be delegated to Microsoft.NetApp/volumes"
+  description = "Map of volumes keyed by volume name. `pool_key` must match a key in `pools` and `subnet_id` must be delegated to Microsoft.Netapp/volumes"
   type = map(object({
     pool_key                   = string
     volume_path                = string

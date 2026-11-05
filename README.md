@@ -70,7 +70,7 @@ A complete, runnable configuration is in [`examples/basic`](examples/basic).
 
 ## Notes
 
-- Volumes require a subnet delegated to `Microsoft.NetApp/volumes`. The example creates one, and the virtual network module in this collection can too.
+- Volumes require a subnet delegated to `Microsoft.Netapp/volumes`. The example creates one, and the virtual network module in this collection can too.
 - Azure NetApp Files must be registered and quota-approved in your subscription before the first deployment.
 - The Active Directory password is a separate `sensitive` variable and is stored in Terraform state.
 
@@ -96,7 +96,7 @@ A complete, runnable configuration is in [`examples/basic`](examples/basic).
 | active_directory_password (sensitive) | Password of the Active Directory service account | `string` | `null` | no |
 | pools | Map of capacity pools keyed by pool name. `size_in_tb` is 1 to 2048 | `map(object)` | `{}` | no |
 | snapshot_policies | Map of snapshot policies keyed by policy name | `map(object)` | `{}` | no |
-| volumes | Map of volumes keyed by volume name. `pool_key` must match a key in `pools` and `subnet_id` must be delegated to Microsoft.NetApp/volumes | `map(object)` | `{}` | no |
+| volumes | Map of volumes keyed by volume name. `pool_key` must match a key in `pools` and `subnet_id` must be delegated to Microsoft.Netapp/volumes | `map(object)` | `{}` | no |
 | tags | Tags applied to all resources | `map(string)` | `{}` | no |
 
 ## Outputs
